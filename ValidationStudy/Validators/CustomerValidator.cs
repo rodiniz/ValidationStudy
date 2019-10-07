@@ -1,8 +1,8 @@
-﻿using FluentValidation;
-using System.Linq;
-
-namespace ValidationStudy.Validators
+﻿namespace ValidationStudy.Validators
 {
+    using FluentValidation;
+    using System.Linq;
+
     public class CustomerValidator : AbstractValidator<Customer>
     {
         public CustomerValidator()

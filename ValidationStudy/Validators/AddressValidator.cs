@@ -1,7 +1,7 @@
-﻿using FluentValidation;
-
-namespace ValidationStudy.Validators
+﻿namespace ValidationStudy.Validators
 {
+    using FluentValidation;
+
     public class AddressValidator : AbstractValidator<Address>
     {
         public AddressValidator()

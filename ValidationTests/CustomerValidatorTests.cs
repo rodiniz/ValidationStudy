@@ -1,12 +1,12 @@
-using AutoFixture;
-using System.Collections.Generic;
-using System.Linq;
-using ValidationStudy;
-using ValidationStudy.Validators;
-using Xunit;
-
 namespace ValidationTests
 {
+    using AutoFixture;
+    using System.Collections.Generic;
+    using System.Linq;
+    using ValidationStudy;
+    using ValidationStudy.Validators;
+    using Xunit;
+
     public class CustomerValidatorTests
     {
         Fixture fixture;
