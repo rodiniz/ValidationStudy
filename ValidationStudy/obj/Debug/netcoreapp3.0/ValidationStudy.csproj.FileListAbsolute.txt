@@ -1,7 +1,0 @@
-C:\Rodrigo\Projetos\ValidationStudy\ValidationStudy\bin\Debug\netcoreapp3.0\ValidationStudy.deps.json
-C:\Rodrigo\Projetos\ValidationStudy\ValidationStudy\bin\Debug\netcoreapp3.0\ValidationStudy.dll
-C:\Rodrigo\Projetos\ValidationStudy\ValidationStudy\bin\Debug\netcoreapp3.0\ValidationStudy.pdb
-C:\Rodrigo\Projetos\ValidationStudy\ValidationStudy\obj\Debug\netcoreapp3.0\ValidationStudy.AssemblyInfoInputs.cache
-C:\Rodrigo\Projetos\ValidationStudy\ValidationStudy\obj\Debug\netcoreapp3.0\ValidationStudy.AssemblyInfo.cs
-C:\Rodrigo\Projetos\ValidationStudy\ValidationStudy\obj\Debug\netcoreapp3.0\ValidationStudy.dll
-C:\Rodrigo\Projetos\ValidationStudy\ValidationStudy\obj\Debug\netcoreapp3.0\ValidationStudy.pdb

@@ -18,10 +18,15 @@ namespace ValidationTests
         }
         [Fact]
         public void CustomerShouldBeValid()
-        {
+        {  
             // Arrange
-            Customer customer = fixture.Create<Customer>();
-
+            var adresses = fixture.Build<Address>()
+              .With(c => c.Default,true)
+              .CreateMany(1).ToList();
+         
+            Customer customer = fixture.Build<Customer>()
+                .With(c => c.Address, adresses)
+                .Create();
             // Act
             var result = validator.Validate(customer);
 
@@ -33,7 +38,12 @@ namespace ValidationTests
         public void CustomerNameShouldNotBeEmpty()
         {
             // Arrange
+            var adresses = fixture.Build<Address>()
+             .With(c => c.Default, true)
+             .CreateMany(1).ToList();
+
             Customer customer = fixture.Build<Customer>()
+                .With(c => c.Address, adresses)
                 .With(c => c.Name, string.Empty)
                 .Create();
 
@@ -67,6 +77,7 @@ namespace ValidationTests
             // Arrange           
             var adresses = fixture.Build<Address>()              
                 .Without(c=> c.Number) 
+                .With(c => c.Default,true)
                 .CreateMany(1).ToList();
 
           
@@ -80,6 +91,25 @@ namespace ValidationTests
             // Assert
             Assert.False(result.IsValid);
             Assert.Contains("Number", result.Errors.First().PropertyName);
+        }
+
+        [Fact]
+        public void CustomerMustHaveOneDefaultAdress()
+        {
+            // Arrange
+            var adresses = fixture.Build<Address>()
+              .With(c => c.Default, false)
+              .CreateMany(1).ToList();
+
+            Customer customer = fixture.Build<Customer>()
+                .With(c => c.Address, adresses)
+                .Create();
+            // Act
+            var result = validator.Validate(customer);
+
+            // Assert
+            Assert.False(result.IsValid);
+            Assert.Equal("Adress list must have one default adress and only one", result.Errors.First().ErrorMessage);
         }
     }
 }

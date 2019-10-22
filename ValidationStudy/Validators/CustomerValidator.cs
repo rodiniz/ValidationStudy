@@ -17,6 +17,8 @@
             RuleForEach(x => x.Address)             
               .SetValidator(new AddressValidator()).When(c=> c.Address.Any());
 
+            RuleFor(x => x.Address).MustHaveOneDefaultAdress();              
+
         }
     }
 }
