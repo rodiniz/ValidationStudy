@@ -113,6 +113,27 @@ namespace ValidationTests
         }
 
         [Fact]
+        public void ValidCustomer()
+        {
+            
+            // Arrange
+            var adresses = fixture.CreateMany<Address>(2).ToList();
+
+            adresses.First().Default = true;
+            adresses.Last().Default = false;
+
+            Customer customer = fixture.Build<Customer>()
+                .With(c => c.Address, adresses)
+                .Create();
+            // Act
+            var result = validator.Validate(customer);
+
+            // Assert
+            Assert.True(result.IsValid);
+           
+        }
+
+        [Fact]
         public void CustomerMustHaveOneDefaultAdressAnother()
         {
             fixture.Customize<Address>(e => e
