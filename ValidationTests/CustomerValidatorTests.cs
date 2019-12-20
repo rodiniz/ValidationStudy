@@ -18,12 +18,12 @@ namespace ValidationTests
         }
         [Fact]
         public void CustomerShouldBeValid()
-        {  
+        {
             // Arrange
             var adresses = fixture.Build<Address>()
-              .With(c => c.Default,true)
+              .With(c => c.Default, true)
               .CreateMany(1).ToList();
-         
+
             Customer customer = fixture.Build<Customer>()
                 .With(c => c.Address, adresses)
                 .Create();
@@ -75,12 +75,12 @@ namespace ValidationTests
         public void CustomerAdressWithNoNumber()
         {
             // Arrange           
-            var adresses = fixture.Build<Address>()              
-                .Without(c=> c.Number) 
-                .With(c => c.Default,true)
+            var adresses = fixture.Build<Address>()
+                .Without(c => c.Number)
+                .With(c => c.Default, true)
                 .CreateMany(1).ToList();
 
-          
+
             Customer customer = fixture.Build<Customer>()
                 .With(c => c.Address, adresses)
                 .Create();
@@ -100,6 +100,28 @@ namespace ValidationTests
             var adresses = fixture.Build<Address>()
               .With(c => c.Default, false)
               .CreateMany(1).ToList();
+
+            Customer customer = fixture.Build<Customer>()
+                .With(c => c.Address, adresses)
+                .Create();
+            // Act
+            var result = validator.Validate(customer);
+
+            // Assert
+            Assert.False(result.IsValid);
+            Assert.Equal("Adress list must have one default adress and only one", result.Errors.First().ErrorMessage);
+        }
+
+        [Fact]
+        public void CustomerMustHaveOneDefaultAdressAnother()
+        {
+            fixture.Customize<Address>(e => e
+                                       .With(x => x.Default, true)
+                                       .With(x => x.Number, 1)
+                               );
+
+            // Arrange
+            var adresses = fixture.CreateMany<Address>(2).ToList();
 
             Customer customer = fixture.Build<Customer>()
                 .With(c => c.Address, adresses)
