@@ -1,35 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Rodrigo\\Projetos\\ValidationStudy\\ValidationTests\\ValidationTests.csproj": {}
+    "C:\\Rodrigo\\projetos\\ValidationStudy\\ValidationTests\\ValidationTests.csproj": {}
   },
   "projects": {
-    "C:\\Rodrigo\\Projetos\\ValidationStudy\\ValidationStudy\\ValidationStudy.csproj": {
+    "C:\\Rodrigo\\projetos\\ValidationStudy\\ValidationStudy\\ValidationStudy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Rodrigo\\Projetos\\ValidationStudy\\ValidationStudy\\ValidationStudy.csproj",
+        "projectUniqueName": "C:\\Rodrigo\\projetos\\ValidationStudy\\ValidationStudy\\ValidationStudy.csproj",
         "projectName": "ValidationStudy",
-        "projectPath": "C:\\Rodrigo\\Projetos\\ValidationStudy\\ValidationStudy\\ValidationStudy.csproj",
-        "packagesPath": "C:\\Users\\admincliente\\.nuget\\packages\\",
-        "outputPath": "C:\\Rodrigo\\Projetos\\ValidationStudy\\ValidationStudy\\obj\\",
+        "projectPath": "C:\\Rodrigo\\projetos\\ValidationStudy\\ValidationStudy\\ValidationStudy.csproj",
+        "packagesPath": "C:\\Users\\rodrigo.diniz\\.nuget\\packages\\",
+        "outputPath": "C:\\Rodrigo\\projetos\\ValidationStudy\\ValidationStudy\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\admincliente\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rodrigo.diniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.2"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://proget.fftech.info/nuget/Farfetch-NuGet-DEV": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.2": {
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -40,17 +37,12 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.2": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "FluentValidation": {
               "target": "Package",
               "version": "[8.5.0, )"
-            },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
             }
           },
           "imports": [
@@ -63,39 +55,41 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Rodrigo\\Projetos\\ValidationStudy\\ValidationTests\\ValidationTests.csproj": {
+    "C:\\Rodrigo\\projetos\\ValidationStudy\\ValidationTests\\ValidationTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Rodrigo\\Projetos\\ValidationStudy\\ValidationTests\\ValidationTests.csproj",
+        "projectUniqueName": "C:\\Rodrigo\\projetos\\ValidationStudy\\ValidationTests\\ValidationTests.csproj",
         "projectName": "ValidationTests",
-        "projectPath": "C:\\Rodrigo\\Projetos\\ValidationStudy\\ValidationTests\\ValidationTests.csproj",
-        "packagesPath": "C:\\Users\\admincliente\\.nuget\\packages\\",
-        "outputPath": "C:\\Rodrigo\\Projetos\\ValidationStudy\\ValidationTests\\obj\\",
+        "projectPath": "C:\\Rodrigo\\projetos\\ValidationStudy\\ValidationTests\\ValidationTests.csproj",
+        "packagesPath": "C:\\Users\\rodrigo.diniz\\.nuget\\packages\\",
+        "outputPath": "C:\\Rodrigo\\projetos\\ValidationStudy\\ValidationTests\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\admincliente\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rodrigo.diniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.2"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://proget.fftech.info/nuget/Farfetch-NuGet-DEV": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.2": {
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Rodrigo\\Projetos\\ValidationStudy\\ValidationStudy\\ValidationStudy.csproj": {
-                "projectPath": "C:\\Rodrigo\\Projetos\\ValidationStudy\\ValidationStudy\\ValidationStudy.csproj"
+              "C:\\Rodrigo\\projetos\\ValidationStudy\\ValidationStudy\\ValidationStudy.csproj": {
+                "projectPath": "C:\\Rodrigo\\projetos\\ValidationStudy\\ValidationStudy\\ValidationStudy.csproj"
               }
             }
           }
@@ -107,37 +101,36 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.2": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "AutoFixture": {
               "target": "Package",
-              "version": "[4.11.0, )"
+              "version": "[4.17.0, )"
             },
             "AutoFixture.Xunit": {
               "target": "Package",
-              "version": "[4.11.0, )"
+              "version": "[4.17.0, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.2.0, )"
-            },
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
+              "version": "[17.2.0, )"
             },
             "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[1.0.1, )"
+              "version": "[3.1.2, )"
             },
             "xunit": {
               "target": "Package",
-              "version": "[2.4.0, )"
+              "version": "[2.4.1, )"
             },
             "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[2.4.0, )"
+              "version": "[2.4.5, )"
             }
           },
           "imports": [
@@ -150,7 +143,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
